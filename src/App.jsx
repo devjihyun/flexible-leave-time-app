@@ -87,6 +87,7 @@ function App() {
     const totalHours = Math.floor(totalWorked / 60);
     const totalMins = totalWorked % 60;
     const diff = totalWorked - targetTotal;
+    const absDiff = Math.abs(diff);
 
     setResults((prev) => ({
       ...prev,
@@ -98,9 +99,7 @@ function App() {
           ? "정확히 목표 달성"
           : diff > 0
           ? `+${Math.floor(diff / 60)}시간 ${diff % 60}분 초과 근무 `
-          : `-${Math.abs(Math.floor(diff / 60))}시간 ${Math.abs(
-              diff % 60
-            )}분 부족`,
+          : `-${Math.floor(absDiff / 60)}시간 ${absDiff % 60}분 부족`,
     }));
   };
 
