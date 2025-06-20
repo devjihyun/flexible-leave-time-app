@@ -125,7 +125,7 @@ function App() {
               label: "어제까지 누적시간",
               value: workedTime,
               setValue: setWorkedTime,
-              placeholder: "152 또는 152:30",
+              placeholder: "152 or 152:30",
               type: "text",
             },
             {
